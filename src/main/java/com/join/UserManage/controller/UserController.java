@@ -23,5 +23,4 @@ public class UserController {
 	public String getUserInfo(HttpServletRequest request,String id) {
 		return userService.getUinfo(id);
 	}
-
 }
