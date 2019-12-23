@@ -13,6 +13,12 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * first
+	 * @param request
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping("/getUserInfo")
 	public String getUserInfo(HttpServletRequest request,String id) {
 		return userService.getUinfo(id);
