@@ -81,5 +81,5 @@
 		<aop:pointcut	expression="execution(* com.join..service..*.*(..))" id="txPointcut" />	
 		<aop:advisor pointcut-ref="txPointcut"	advice-ref="txAdvice" />
 	</aop:config>
-
+ 	<import resource="classpath*:/spring-elastic.xml" />
 </beans>
