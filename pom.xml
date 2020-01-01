@@ -11,7 +11,7 @@
 	<!-- springmvc网址 https://blog.csdn.net/qq_39986274/article/details/79551866 
 		https://blog.csdn.net/lixintao95/article/details/89418820 -->
 	<properties>
-		<spring.version>5.2.1.RELEASE</spring.version>
+		<spring.version>5.2.2.RELEASE</spring.version>
 		<mybatis.version>3.2.6</mybatis.version>
 		<!-- log4j日志文件管理包版本 -->
 		<slf4j.version>1.7.7</slf4j.version>
