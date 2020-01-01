@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+        <setting name= "mapUnderscoreToCamelCase" value = "true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+	<!-- 类型别名 -->
+	 <typeAliases>
+		<package name="com.join.UserManage.entity"/>
+	</typeAliases>
+	<!-- 插件配置 -->
+	<!-- <plugins> 
+		分页插件，暂时注释掉
+		<plugin interceptor="com.joinsoft.core.persistence.interceptor.PaginationInterceptor">
+		<plugin
+			interceptor="com.joinsoft.core.persistence.interceptor.MyPlugin">
+			<property value="oracle" name="dialect" />
+			<property value=".*page.*" name="pageSqlId" />
+		</plugin>
+	</plugins> -->
+
+
+</configuration>

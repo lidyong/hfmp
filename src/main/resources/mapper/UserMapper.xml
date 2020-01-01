@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.join.UserManage.mapper.UserMapper">
+	<!--动态查询-->
+	<select id="getListBySql" parameterType="string"  resultType="java.util.HashMap">
+		${sql}
+	</select>
+	
+	<!--动态查询下拉框-->
+	<select id="getUserinfo" parameterType="string"  resultType="User">
+		select * from r_userinfo where id=#{id}
+	</select>
+	
+   
+  <!-- 调用存储过程信息 --> 
+    <select id="getFsupportinfo"  statementType="CALLABLE" parameterType="java.util.Map"   resultType="java.util.Map">  
+    <![CDATA[
+        {call PRO_F_SUPPORTINFO(
+            #{busino,mode=IN,jdbcType=VARCHAR}, #{outResult,mode=OUT,jdbcType=VARCHAR} 
+        )}
+    ]]>
+	</select>
+    
+</mapper>
+
