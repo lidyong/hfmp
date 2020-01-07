@@ -36,5 +36,14 @@ public class UserController {
 		System.out.println(user.getName());
 		return user.getName();
 	}
-
+	@RequestMapping("/esQueryByName")
+	public String esQueryByName(HttpServletRequest request,String name) {
+		String user = userService.esQuery(name);
+		return user;
+	}
+	@RequestMapping("/saveEsDoc")
+	public String saveEsDoc(HttpServletRequest request,String id ,String name) {
+		userService.saveEsDoc(id,name);
+		return "success";
+	}
 }

@@ -19,4 +19,5 @@ public class User {
 	private String age;
 	@Field(index=true, store = true, type = FieldType.Text)
 	private String idcard;
+
 }
